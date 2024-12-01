@@ -27,4 +27,6 @@ Tag.init(
   }
 );
 
-module.exports = Tag;
+module.exports = Tag; // module.exports is a JavaScript statement that exports 
+//an object to be used in another file. In this case, we are exporting the Tag model. 
+//This will allow us to import the Tag model in other parts of our application.

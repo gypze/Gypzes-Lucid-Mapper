@@ -23,7 +23,7 @@ Product.init(
       allowNull: false
     },
     // price column
-    price: {
+    price: { // Here is where we establish the price column as a DECIMAL data type
       type: DataTypes.DECIMAL,
       allowNull: false,
       validate: {
@@ -31,7 +31,7 @@ Product.init(
       }
     },
     // stock column
-    stock: {
+    stock: { // Here is where we establish the stock column as an INTEGER data type
       type: DataTypes.INTEGER,
       allowNull: false,
       defaultValue: 10,
@@ -40,7 +40,7 @@ Product.init(
       }
     },
     // category_id column
-    category_id: {
+    category_id: { // Here is where we establish the category_id column as an INTEGER data type
       type: DataTypes.INTEGER,
       references: {
         model: 'category',

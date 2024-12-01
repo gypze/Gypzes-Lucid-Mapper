@@ -1,72 +1,89 @@
-// routes/api/tag-routes.js
-const router = require('express').Router();
-const { Tag, Product, ProductTag } = require('../../models');
+const router = require("express").Router();
+const { Tag, Product, ProductTag } = require("../../models");
 
-// GET /api/tags 
-// This route will return all tags
-router.get('/', async (req, res) => {
+// The `/api/tags` endpoint
+
+router.get("/", async (req, res) => {
+  // find all tags
+  // be sure to include its associated Product data
   try {
-    const tags = await Tag.findAll({
-      include: [{ model: Product, through: ProductTag }]
+    const tagData = await Tag.findAll({
+      include: [{ model: Product, through: ProductTag }],
     });
-    res.status(200).json(tags);
+    res.status(200).json(tagData);
   } catch (err) {
     res.status(500).json(err);
   }
 });
 
-// GET /api/tags/:id
-// This route will return a single tag by its id
-router.get('/:id', async (req, res) => {
+router.get("/:id", async (req, res) => {
+  // find a single tag by its `id`
+  // be sure to include its associated Product data
   try {
-    const tag = await Tag.findOne({
-      where: { id: req.params.id },
-      include: [{ model: Product, through: ProductTag }]
+    const tagData = await Tag.findByPk(req.params.id, {
+      include: [{ model: Product, through: ProductTag }],
     });
-    if (!tag) {
-      res.status(404).json({ message: 'Tag not found' });
+
+    if (!tagData) {
+      res.status(404).json({ message: "No location found with this id" });
       return;
     }
-    res.status(200).json(tag);
+
+    res.status(200).json(tagData);
   } catch (err) {
     res.status(500).json(err);
   }
 });
 
-// POST /api/tags
-// This route will allow a user to create a new tag
-router.post('/', async (req, res) => {
+router.post("/", async (req, res) => {
+  // create a new tag
   try {
     const newTag = await Tag.create(req.body);
-    res.status(201).json(newTag);
+
+    res.status(200).json(tagData);
   } catch (err) {
     res.status(400).json(err);
   }
 });
 
-// PUT /api/tags/:id
-// This route will allow a user to update a tag by its `id`
-router.put('/:id', async (req, res) => {
+router.put("/:id", async (req, res) => {
+  // update a tag's name by its `id` value
   try {
-    const tag = await Tag.update(req.body, {
-      where: { id: req.params.id }
+    const tagData = await Tag.update(req.body, {
+      where: {
+        id: req.params.id,
+      },
     });
-    res.status(200).json(tag);
+
+
+    if (!tagData) {
+      res.status(404).json({ message: "No location found with this id!" });
+      return;
+    }
+    
+    res.status(200).json(tagData);
   } catch (err) {
-    res.status(400).json(err);
+    res.status(500).json(err);
   }
 });
 
-// DELETE /api/tags/:id
-// This route will allow a user to delete a tag
-router.delete('/:id', async (req, res) => {
+router.delete("/:id", async (req, res) => {
+  // delete on tag by its `id` value
   try {
-    const tag = await Tag.destroy({
-      where: { id: req.params.id }
+    const tagData = await Tag.destroy({
+      where: {
+        id: req.params.id,
+      },
     });
-    res.status(200).json(tag);
+
+    if (!tagData) {
+      res.status(404).json({ message: "No location found with this id!" });
+      return;
+    }
+
+    res.status(200).json(tagData);
   } catch (err) {
-    res.status(400).json(err);
+    res.status(500).json(err);
   }
 });
 
