@@ -43,7 +43,7 @@ Hi, I’m Gypze, a dedicated and enthusiastic junior developer currently buildin
 
 1. Clone this repository:
    ```bash
-   git clone <your-repository-url>
+   git clone <https://github.com/gypze/Gypzes-Lucid-Mapper.git> 
    ```
 2. Navigate to the project directory:
    ```bash
