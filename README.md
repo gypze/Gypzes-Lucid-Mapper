@@ -1,143 +1,101 @@
-
-📒 Gypze's PWA Text Editor
-
-## Table of Contents  
-
-1. [Description](#description)  
-
-2. [Deployed Application](#deployed-application)  
-
-3. [Installation](#installation)  
-
-4. [Usage](#usage)  
-
-5. [Technologies Used](#technologies-used)  
-
-6. [Features](#features)  
-
-7. [Screenshots](#screenshots)  
-
-8. [License](#license)  
-
-9. [Questions](#questions)  
-
+# E-Commerce Back End: ORM Challenge
 
 ## Description
 
-Gypze's Progressive Web Application (PWA) Text Editor is a single-page application that enables developers to create notes or code snippets, even offline. The app uses multiple data persistence techniques with IndexedDB to ensure reliability. Packaged with Webpack and deployed on Render, it meets all PWA criteria, including service workers and offline functionality.
+This project implements the back end for an e-commerce site, utilizing modern technologies such as Express.js, Sequelize, and PostgreSQL. The application provides a functional API that manages categories, products, and tags within the e-commerce database. Designed for internet retail businesses, this back-end solution demonstrates the power of Object-Relational Mapping (ORM) and the importance of creating efficient and scalable APIs.
 
-This project demonstrates an advanced application of concepts like client-server integration, data storage with IndexedDB, service worker registration, and modern JavaScript usage.
+## Table of Contents
 
-
-
-## Deployed Application
-
-You can view the live project here:  
-🔗 [Gypze's PWA Text Editor](https://gypzes-pwa.onrender.com)
-
-## GitHub Repository
-
-🔗 [GitHub Repo](https://github.com/gypze/Gypzes-PWA.git)
-
+- [Description](#description)
+- [About the Developer](#about-the-developer)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Walkthrough Video](#walkthrough-video)
+- [Screenshots](#screenshots)
+- [License](#license)
 
 
-## User Story
 
-AS A developer  
-I WANT to create notes or code snippets with or without an internet connection  
-SO THAT I can reliably retrieve them for later use  
+## About the Developer
 
-## Acceptance Criteria
+Hi, I’m Gypze, a dedicated and enthusiastic junior developer currently building a solid foundation in web development technologies. My journey into coding is fueled by a passion for continuous learning and creating impactful projects. I thrive on challenges and enjoy exploring modern frameworks like React and technologies like PostgreSQL. When I'm not coding, you’ll find me gaming, making jewelry, or hanging out with my cats. Let’s connect and build something amazing together!
 
-* GIVEN a text editor web application:
-    
-    * WHEN I open my application in my editor
-        -  I see a client-server folder structure.
-    
-    * WHEN I run npm run start from the root directory
-        -  The backend starts and serves the client application.
-    
-    * WHEN I run the text editor application
-        -  The JavaScript files are bundled with Webpack.
-    
-    * WHEN I run my Webpack plugins
-        -  I have a generated HTML file, service worker, and manifest file.
-    
-    * WHEN I use next-gen JavaScript
-        -  The app runs in the browser without errors.
-    
-    * WHEN I open the text editor
-        -  IndexedDB immediately creates a database for content storage.
-    
-    * WHEN I enter content and click off the DOM window
-        -  The content is saved in IndexedDB.
-    
-    * WHEN I reopen the text editor
-        -  The content is retrieved from IndexedDB.
-    
-    * WHEN I click the Install button
-        -  The application downloads as an icon on my desktop.
-    
-    * WHEN I load the application
-        -  A service worker registers and precaches static assets.
-    
-    * WHEN I deploy the app to Render
-        -  Proper build scripts ensure the app functions flawlessly.
+## Features
 
-    
+- Connects to a PostgreSQL database using Sequelize.
+- Allows database schema creation and seeding with test data.
+- Provides API routes for managing categories, products, and tags.
+- Supports CRUD operations (Create, Read, Update, Delete) via API endpoints.
+- Returns formatted JSON data for easy integration.
+
+## Technologies Used
+
+- Node.js
+- Express.js
+- Sequelize ORM
+- PostgreSQL
+- dotenv
+
 ## Installation
 
-1. Clone the Repository
+1. Clone this repository:
+   ```bash
+   git clone <your-repository-url>
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd ecommerce-backend
+   ```
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
+4. Create a `.env` file in the root directory with the following content:
+   ```env
+   DB_NAME=your_database_name
+   DB_USER=your_postgresql_username
+   DB_PASSWORD=your_postgresql_password
+   ```
 
-git clone https://github.com/gypze/Gypzes-PWA.git
-
-cd Gypzes-PWA
-
-2. Install Dependencies:
-
-npm install
-
-3. Run the Application
-
-npm run dev
-
-The app will start the server and bundle the client-side code using Webpack. Open http://localhost:3000 in your browser.
-
+5. Seed the database with test data:
+   ```bash
+   npm run seed
+   ```
 
 ## Usage
 
-* Add Content: Type notes or code snippets in the text editor.
-* Offline Support: The app works offline thanks to IndexedDB and service workers.
-* Install the App: Click the Install button to add the app to your desktop.
-*  Data Persistence: Content is saved in the browser and retrieved upon reopening.
-    
-    
-## Technologies Used
-* JavaScript
-* Webpack
-* IndexedDB (via idb package)
-* Service Workers
-* Workbox
-* Node.js
-* Express.js
-* PWA Principles
-* Render Deployment
+1. Start the server:
+   ```bash
+   npm start
+   ```
+2. Use Insomnia Core or Postman to test the API routes:
+   - **GET** routes for categories, products, and tags
+   - **POST** routes to create new data
+   - **PUT** routes to update existing data
+   - **DELETE** routes to delete data
 
+## Walkthrough Video
 
-## Features
-* Offline functionality using IndexedDB and service workers.
-* Simple and intuitive user interface.
-* Installable as a desktop application.
-* Bundled and optimized using Webpack.
-* Deployed seamlessly to Render.
+[![Walkthrough Video](#)](#)
+
+This video demonstrates the functionality of the application, including:
+
+- Connecting to the database
+- Running schema and seed commands
+- Testing API routes using Insomnia Core 
+
+https://youtu.be/KZwEG2n59cE
+
+## Screenshots
+
+![alt text](<Screenshot 2024-12-22 135501.png>)
+
 
 ## License
 
-This project is licensed under the MIT License.
+This project is licensed under the MIT License. See the LICENSE file for details.
 
 
-## Questions
-* For questions or collaboration, connect with me here:
 
-GitHub: @gypze
-Live App: Gypze's PWA
