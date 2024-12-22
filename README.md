@@ -79,7 +79,7 @@ Hi, I’m Gypze, a dedicated and enthusiastic junior developer currently buildin
 
 ## Walkthrough Video
 
-[![Walkthrough Video](#)](#)
+
 
 This video demonstrates the functionality of the application, including:
 
