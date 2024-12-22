@@ -1,3 +1,8 @@
+// Purpose: This file is used to create the Product model, 
+// which will be used to interact with the products table in the database.
+// This model will be used to perform CRUD operations on the products table.
+
+
 // import important parts of sequelize library
 const { Model, DataTypes } = require('sequelize');
 // import our database connection from config.js

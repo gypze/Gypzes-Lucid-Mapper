@@ -1,3 +1,5 @@
+// This file will contain the Tag model.
+
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection.js');
 

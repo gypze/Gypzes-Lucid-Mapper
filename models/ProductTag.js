@@ -1,3 +1,6 @@
+// Description: This file contains the ProductTag model that will be used to create the ProductTag table in the database.
+
+
 // models/ProductTag.js
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
