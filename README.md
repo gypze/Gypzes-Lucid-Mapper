@@ -86,8 +86,8 @@ This video demonstrates the functionality of the application, including:
 - Connecting to the database
 - Running schema and seed commands
 - Testing API routes using Insomnia Core 
-
-https://youtu.be/KZwEG2n59cE
+[
+https://youtu.be/KZwEG2n59cE](https://youtu.be/2ZdT0bZ7GYc)
 
 ## Screenshots
 
