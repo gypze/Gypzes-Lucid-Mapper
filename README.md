@@ -79,7 +79,7 @@ Hi, I’m Gypze, a dedicated and enthusiastic junior developer currently buildin
 
 ## Walkthrough Video
 
-
+https://youtu.be/2ZdT0bZ7GYc
 
 This video demonstrates the functionality of the application, including:
 
@@ -89,7 +89,7 @@ This video demonstrates the functionality of the application, including:
 
 
 
-[https://youtu.be/KZwEG2n59cE](https://youtu.be/2ZdT0bZ7GYc)](https://youtu.be/2ZdT0bZ7GYc)
+
 
 ## Screenshots
 
