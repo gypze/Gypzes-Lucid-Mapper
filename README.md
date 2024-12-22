@@ -91,7 +91,8 @@ https://youtu.be/KZwEG2n59cE
 
 ## Screenshots
 
-![alt text](<Screenshot 2024-12-22 135501.png>)
+![Screenshot 2024-12-22 135501](https://github.com/user-attachments/assets/4dccf3f5-e2df-4054-b1ed-3dd6bf518ad0)
+
 
 
 ## License
